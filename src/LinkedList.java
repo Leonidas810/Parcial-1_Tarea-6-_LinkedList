@@ -60,6 +60,7 @@ public class LinkedList {
             head.setPrevious(null);
         }
         head=null;
+        size=0;
     }
 
     public boolean setAt(int indexToSearch,String data){
@@ -87,6 +88,7 @@ public class LinkedList {
         Node iteratorNode= head;
         while (iteratorNode != null){
             if(iteratorNode.getData().equals(data)){
+                size--;
                 if(iteratorNode==head){
                     head = head.getNext();
                     head.setPrevious(null);
