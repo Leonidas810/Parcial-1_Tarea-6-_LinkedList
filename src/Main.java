@@ -1,15 +1,18 @@
+import list.ArrayList;
+import list.ArrayListIterator;
+
 public class Main {
-    public  static void main(String[] args){
+    public static void main(String[] args) {
+        ArrayList arrayList = new ArrayList();
 
-        LinkedList list = new LinkedList();
-        list.addAtTail(String.valueOf(10));
-        list.addAtFront(String.valueOf(20));
+        arrayList.addAtTail("2");
+        arrayList.addAtFront("1");
+        arrayList.addAtFront("0");
 
-        System.out.println("Size: "+list.getSize());
-
-        list.removeAll();
-        System.out.println("Size: "+list.getSize());
-
-
+        ArrayListIterator iterator = arrayList.getIterator();
+        while(iterator.hasNext()) {
+            String value = iterator.next();
+            System.out.println(value);
+        }
     }
 }
